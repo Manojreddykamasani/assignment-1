@@ -2,7 +2,7 @@ import { Line } from "react-chartjs-2";
 import "chartjs-adapter-date-fns";
 import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip,BarController, BarElement, TimeScale, Filler } from "chart.js";
 
-Chart.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, BarElement, TimeScale, Filler);
+Chart.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip,BarController, BarElement, TimeScale, Filler);
 
 export default function ChartView({ data }) {
   if (!data.length) return <p className="text-gray-500">No data to display.</p>;
