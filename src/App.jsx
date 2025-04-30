@@ -21,7 +21,6 @@ export default function App() {
         setData(parsed);
         setFilteredData(parsed);
 
-        // 🟢 Set first available stock by default
         const firstCompany = parsed.find((d) => d.index_name)?.index_name;
         if (firstCompany) setSelectedCompany(firstCompany);
 
@@ -66,7 +65,7 @@ export default function App() {
   results={filteredCompanies}
   onSelect={(name) => {
     setSelectedCompany(name);
-    setSearchTerm(""); // clear search after selection
+    setSearchTerm(""); 
   }}
 />
 

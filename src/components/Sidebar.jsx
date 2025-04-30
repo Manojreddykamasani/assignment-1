@@ -6,7 +6,6 @@ export default function Sidebar({ companies, onSelect, selected }) {
     <aside className="w-full md:w-64 bg-white dark:bg-[#1e293b] p-4 shadow-lg md:h-screen">
       <h2 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-200">📈 Stock Name</h2>
 
-      {/* Company List */}
       <ul className="space-y-2 overflow-y-auto max-h-[70vh]">
         {companies.map((name, idx) => (
           <li

@@ -2,7 +2,6 @@ import { Line } from "react-chartjs-2";
 import "chartjs-adapter-date-fns";
 import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, TimeScale, Filler } from "chart.js";
 
-// Register all necessary components
 Chart.register(
   LineElement,
   PointElement,
@@ -53,12 +52,12 @@ export default function ChartView({ data }) {
       {
         label: "Volume",
         data: volumes,
-        borderColor: "#d4d4d4", // Gray color for volume
-        backgroundColor: "rgba(100, 116, 139, 0.3)", // Light gray
+        borderColor: "#d4d4d4", 
+        backgroundColor: "rgba(100, 116, 139, 0.3)", 
         tension: 0.4,
-        fill: false, // Don't fill the area under the volume line
-        yAxisID: "y1", // Different y-axis for volume
-        pointRadius: 0 // Remove points for cleaner look
+        fill: false, 
+        yAxisID: "y1",
+        pointRadius: 0 
       }
     ]
   };
