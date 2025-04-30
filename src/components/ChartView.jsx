@@ -1,18 +1,16 @@
 import { Line } from "react-chartjs-2";
 import "chartjs-adapter-date-fns";
-import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, TimeScale, Filler, BarElement, BarController } from "chart.js";
+import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, TimeScale, Filler } from "chart.js";
 
-// Register all the necessary components
+// Register all necessary components
 Chart.register(
-  LineElement, 
-  PointElement, 
-  CategoryScale, 
-  LinearScale, 
-  Tooltip, 
-  TimeScale, 
-  Filler, 
-  BarElement, 
-  BarController
+  LineElement,
+  PointElement,
+  CategoryScale,
+  LinearScale,
+  Tooltip,
+  TimeScale,
+  Filler
 );
 
 export default function ChartView({ data }) {
@@ -55,9 +53,12 @@ export default function ChartView({ data }) {
       {
         label: "Volume",
         data: volumes,
-        yAxisID: "y1",
-        type: "bar",
-        backgroundColor: "rgba(100, 116, 139, 0.3)"
+        borderColor: "#d4d4d4", // Gray color for volume
+        backgroundColor: "rgba(100, 116, 139, 0.3)", // Light gray
+        tension: 0.4,
+        fill: false, // Don't fill the area under the volume line
+        yAxisID: "y1", // Different y-axis for volume
+        pointRadius: 0 // Remove points for cleaner look
       }
     ]
   };
@@ -66,7 +67,9 @@ export default function ChartView({ data }) {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
-      y: { title: { display: true, text: "Price" } },
+      y: { 
+        title: { display: true, text: "Price" } 
+      },
       y1: {
         position: "right",
         title: { display: true, text: "Volume" },
