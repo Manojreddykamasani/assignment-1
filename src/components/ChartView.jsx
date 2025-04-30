@@ -1,6 +1,6 @@
 import { Line } from "react-chartjs-2";
 import "chartjs-adapter-date-fns";
-import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, BarElement, TimeScale, Filler } from "chart.js";
+import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip,BarController, BarElement, TimeScale, Filler } from "chart.js";
 
 Chart.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip, BarElement, TimeScale, Filler);
 
