@@ -1,8 +1,19 @@
 import { Line } from "react-chartjs-2";
 import "chartjs-adapter-date-fns";
-import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip,BarController, BarElement, TimeScale, Filler } from "chart.js";
+import { Chart, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, TimeScale, Filler, BarElement, BarController } from "chart.js";
 
-Chart.register(LineElement, PointElement, CategoryScale, LinearScale, Tooltip,BarController, BarElement, TimeScale, Filler);
+// Register all the necessary components
+Chart.register(
+  LineElement, 
+  PointElement, 
+  CategoryScale, 
+  LinearScale, 
+  Tooltip, 
+  TimeScale, 
+  Filler, 
+  BarElement, 
+  BarController
+);
 
 export default function ChartView({ data }) {
   if (!data.length) return <p className="text-gray-500">No data to display.</p>;
