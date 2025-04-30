@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import Sidebar from "./components/Sidebar";
 import ChartView from "./components/ChartView";
-import DarkModeToggle from "./components/DarkModeToggle";
 import SearchBar from "./components/SearchBar";
 import DateRangeFilter from "./components/DateRangeFilter";
 
